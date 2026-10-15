@@ -31,6 +31,8 @@ p, h1, h2, h3 { margin: 0; }
 .hero-meta { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
 .eyebrow, .location { font: 10px/1.6 var(--mono); letter-spacing: 1.4px; }
 .eyebrow { color: var(--muted); }
+.hero-meta > .eyebrow { color: #10b981; }
+.hero-meta .status-dot { background: currentColor; }
 .status-dot { display: inline-block; width: 6px; height: 6px; background: var(--accent); border-radius: 50%; margin: 0 9px 1px 0; }
 .location { color: var(--muted); letter-spacing: .8px; }
 .meta-divider { color: #646461; margin: 0 9px; }
@@ -66,7 +68,7 @@ h2 { font-size: clamp(25px, 3vw, 32px); line-height: 1.3; font-weight: 500; lett
 .work .section-number { margin-bottom: 8px; }
 .project-list { padding-top: 4px; }
 .project { position: relative; padding-bottom: 18px; }
-.project summary { position: relative; display: grid; grid-template-columns: 36px minmax(0, 1fr) 24px; align-items: start; gap: 16px; padding: 8px 0 14px; cursor: pointer; list-style: none; border-radius: 4px; }
+.project summary { position: relative; display: grid; grid-template-columns: 36px minmax(0, 1fr) 24px; align-items: start; gap: 16px; padding: 8px 52px 14px 0; cursor: pointer; list-style: none; border-radius: 4px; }
 .project summary::-webkit-details-marker { display: none; }
 .project summary:hover h3 { color: var(--accent); }
 .project-icon { position: relative; display: grid; place-items: center; width: 36px; height: 36px; background: #101010; border: 1px solid var(--line); border-radius: 7px; color: var(--muted); }
@@ -76,11 +78,11 @@ h2 { font-size: clamp(25px, 3vw, 32px); line-height: 1.3; font-weight: 500; lett
 .project-meta span { margin: 0 5px; color: #666; }
 .project-toggle { display: grid; place-items: center; height: 30px; color: var(--muted); }
 .project-toggle::before { content: ""; width: 6px; height: 6px; border-right: 1px solid currentColor; border-bottom: 1px solid currentColor; transform: rotate(45deg); transition: transform 180ms ease; }
-.project[open] .project-toggle::before { transform: rotate(225deg); }
+.project-details[open] .project-toggle::before { transform: rotate(225deg); }
 .project-content { padding: 0 36px 12px 52px; }
 .project-features { margin: 0; padding-left: 17px; max-width: 740px; font: 12px/1.8 var(--mono); color: #c7c7c1; }
 .project-features li + li { margin-top: 5px; }
-.project-repository { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; margin-top: 14px; border: 1px solid var(--line); border-radius: 6px; transition: background 180ms ease; }
+.project-repository { position: absolute; top: 8px; right: 0; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border: 1px solid var(--line); border-radius: 6px; transition: background 180ms ease; }
 .project-repository:hover { background: #171717; }
 .project-repository img { display: block; }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 18px 45px 0 0; list-style: none; }
@@ -162,6 +164,8 @@ footer a span { padding-left: 10px; }
   .work.section { padding-top: 30px; }
   .project summary { grid-template-columns: 32px minmax(0, 1fr) 18px; gap: 12px; }
   .project-icon { width: 32px; height: 32px; }
+  .project summary { padding-right: 42px; }
+  .project-repository { width: 32px; height: 32px; }
   .project-content { padding: 0 0 12px 44px; }
   .project h3 { font-size: 16px; }
   .project-heading .project-meta { font-size: 11px; }
