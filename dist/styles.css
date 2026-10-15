@@ -92,10 +92,11 @@ h2 { font-size: clamp(25px, 3vw, 32px); line-height: 1.3; font-weight: 500; lett
 .about-copy .text-link { margin-top: 24px; }
 .toolkit { margin-top: 30px; }
 .toolkit h3 { font-size: 14px; font-weight: 500; margin-bottom: 18px; }
-.tool-row { display: flex; gap: 15px; align-items: center; border-top: 1px solid var(--line); padding: 16px 0; }
-.tool-symbol { display: grid; place-items: center; width: 40px; height: 40px; flex-shrink: 0; font: 11px var(--mono); color: #d1d1ca; background: #1b1b1d; border: 1px solid #333336; border-radius: 6px; }
-.tool-row strong { font-size: 13px; font-weight: 500; }
-.tool-row p { color: var(--muted); font-size: 11px; margin-top: 1px; }
+.tool-group { margin-top: 20px; }
+.tool-group h4 { margin: 0 0 10px; color: var(--muted); font: 9px/1.6 var(--mono); letter-spacing: 1.2px; text-transform: uppercase; }
+.tool-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.tool-pills li { display: inline-flex; align-items: center; gap: 8px; min-height: 34px; padding: 6px 10px; border: 1px solid var(--line); border-radius: 6px; background: #0d0d0d; font-size: 11px; line-height: 1.4; white-space: nowrap; }
+.tool-pills img { display: block; width: 18px; height: 18px; flex: none; object-fit: contain; }
 .learning-note { margin-top: 12px; padding-top: 22px; border-top: 1px solid var(--line); }
 .learning-note .eyebrow { font-size: 9px; }
 .learning-note p { margin-top: 9px; font-size: 12px; color: var(--muted); line-height: 1.9; }
@@ -175,8 +176,6 @@ footer a span { padding-left: 10px; }
   .about { grid-template-columns: 1fr; gap: 35px; }
   .about-copy > p { font-size: 14px; margin-top: 17px; }
   .toolkit { margin-top: 0; }
-  .tool-row { padding: 14px 0; }
-  .tool-row p { font-size: 12px; }
   .contact { margin-top: 48px; padding: 35px 0; }
   .contact h2 { font-size: 39px; letter-spacing: -1.5px; }
   .contact-main { gap: 14px; align-items: start; }
